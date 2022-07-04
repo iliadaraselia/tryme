@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+      integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="head-wrap">
+        <span class="logo">
+          <a href="./mtavari.html"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2c/OneWeb_Logo.png"
+              alt="handaba" /></a
+        ></span>
+
+        <ul class="navigation main-nav">
+          <li><a href="../mtavari.html">main</a></li>
+          <li><a href="./manga.html">manga</a></li>
+
+          <li><a href="./watch-later.html">read later</a></li>
+          <li><a href="./info.html">info</a></li>
+          <li><a href="./contact.html">contact</a></li>
+        </ul>
+
+        <ul class="navigation second-nav link-1">
+          <li class="language">
+            <a href="./language.html">language</a>
+            <div class="lang-hover">
+              <ul class="pick-language">
+                <li class="lang-wrap">
+                  ქართული
+                  <div class="lang-img">
+                    <img src="../media/nav/pngwing.com.png" alt="ara" />
+                  </div>
+                </li>
+                <li class="lang-wrap">
+                  english
+
+                  <div class="lang-img">
+                    <img src="../media/nav/pngwing.com (1).png" alt="ara" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./log.html">sign in</a></li>
+          <li><a href="./register.html">register</a></li>
+        </ul>
+        <span class="drop-menu mobile-btn"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
+        <span class="drop-menu tablet-btn"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
+      </div>
+    </header>
+    <main>
+      <form action="register" class="register">
+        <!------------------------------- name - lastname ----------------->
+
+        <input
+          class="info"
+          type="text"
+          id="fname"
+          name="name"
+          placeholder="name:"
+          required
+        />
+        <input
+          class="info"
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="last name:"
+          required
+        />
+
+        <!------------------------ date of birth----------------->
+
+        <label class="info center" for="start">date of birth: </label>
+        <input
+          class="info"
+          type="date"
+          id="birthday"
+          name="birthday"
+          required
+        />
+
+        <!----------------------------- contact ------------------------->
+        <input
+          class="info"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="email:"
+          required
+        />
+
+        <input
+          class="info"
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="phone number:"
+          required
+        />
+
+        <!--------------- address ----------------->
+        <input
+          class="info"
+          list="country"
+          name="country"
+          class="datalist-input"
+          placeholder="country:"
+          oninput="checkEmail()"
+        />
+        <input class="info" name="city" type="text" placeholder="city" />
+
+        <!--  ====================== adgili rogori unda iyos paroli  ========================== -->
+        <div class="pass-info">
+          <ul>
+            <li class="lower">
+              <span><i class="fa-solid fa-x"></i></span> must contain lower
+              letters [a-z]
+            </li>
+            <li class="capital">
+              <span><i class="fa-solid fa-x"></i></span> must contain capital
+              letters [A-Z]
+            </li>
+            <li class="number">
+              <span><i class="fa-solid fa-x"></i></span> must contain numbers
+              [0-9]
+            </li>
+
+            <li class="symbol">
+              <span><i class="fa-solid fa-x"></i></span> must contain symbols
+            </li>
+          </ul>
+        </div>
+        <!----------------------------------- psssword ------------------->
+        <input
+          class="info first-pass"
+          placeholder="password:"
+          type="password"
+          id="pass"
+          name="password"
+          minlength="8"
+          required
+        />
+
+        <div class="password-strenght" style="display: none">
+          <div class="strenght" style="display: none"></div>
+          <h3 class="pass-strenght-info" style="display: none">strong</h3>
+        </div>
+
+        <input
+          class="info second-pass"
+          placeholder="repeat password:"
+          type="password"
+          id="pass-repeat"
+          name="password"
+          required
+        />
+
+        <div class="check-info-password" style="display: none"></div>
+
+        <label class="info center" for="start">date of registration </label>
+        <input class="info" type="date" id="reg-date" disabled="" />
+        <!-- <div class="check-validity">
+          <i class="fa-solid fa-repeat"></i> press to check validity
+        </div> -->
+        <button class="register-me">register</button>
+      </form>
+    </main>
+    <script src="../js/register.js"></script>
+    <script src="../js/header.js"></script>
+  </body>
+</html>

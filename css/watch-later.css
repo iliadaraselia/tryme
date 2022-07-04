@@ -1,0 +1,89 @@
+.grid-wrap {
+  display: grid;
+  grid-template-columns: 90vw;
+  grid-template-rows: 100px 80vh;
+  justify-content: center;
+  align-items: start;
+}
+.grid-item {
+  margin-top: 2rem;
+}
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-items: center;
+  align-items: center;
+}
+.add-container h2 {
+  grid-area: title;
+}
+.go-to-sleep {
+  grid-area: imput;
+}
+.add-container input {
+  padding-left: 5px;
+  margin: 10px;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  border: none;
+  box-shadow: 0px 0px 10px #888;
+}
+
+.add-container input:focus {
+  transform: scale(1.01);
+  border: none;
+  outline: none;
+}
+
+.add-container button {
+  margin: 10px;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 10px #888;
+  font-size: 1.25rem;
+}
+.add-container button:active {
+  color: white;
+  background-color: black;
+}
+.added {
+  margin-top: 2rem;
+  align-self: start;
+  display: grid;
+
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+}
+.list-item {
+  min-width: 20%;
+  min-height: 20%;
+  max-height: auto;
+  max-width: auto;
+  box-shadow: 0px 0px 10px #888;
+
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-item p {
+  max-width: 300px;
+}
+.delete {
+  padding: 5px;
+  border: none;
+  box-shadow: 0px 0px 10px #888;
+  border-radius: 3px;
+}
+.delete:active {
+  background-color: red;
+  color: white;
+}

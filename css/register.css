@@ -1,0 +1,112 @@
+main {
+  height: 1000px;
+}
+
+.register {
+  position: relative;
+  font-size: 1.5rem;
+  min-height: 550px;
+  height: 800px;
+  min-width: 350px;
+  width: 400px;
+
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.info {
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1rem;
+  height: 2rem;
+  width: 16rem;
+}
+.info:focus {
+  transform: scale(1.025);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.sex {
+  display: flex;
+}
+
+.register-me {
+  margin-top: 1.5rem;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 8rem;
+
+  color: black;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 20px #464646;
+}
+.register-me:active {
+  transform: scale(1);
+  background-color: black;
+  color: white;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.password-strenght {
+  width: 16rem;
+  display: grid;
+  grid-template-areas:
+    "red  "
+    "text ";
+  grid-template-columns: repeat(4rem);
+  grid-template-rows: repeat(4rem);
+}
+.strenght {
+  grid-area: red;
+  height: 20px;
+  /* background-color: green;
+  background-color: yellowgreen;
+  background-color: orange;
+  background-color: red; */
+}
+
+.pass-strenght-info {
+  grid-area: text;
+}
+.check-validity {
+  margin-top: 1.5rem;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+
+  color: black;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 20px #464646;
+  cursor: pointer;
+}
+.check-validity:active {
+  color: white;
+  background-color: black;
+}
+.check-info-email,
+.check-info-password {
+  /* display: none; */
+  color: #888;
+  padding: 8px;
+  border: 2px solid red;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.pass-info {
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1rem;
+}

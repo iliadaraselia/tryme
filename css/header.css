@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  /* position: absolute; */
+  background-color: beige;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  height: auto;
+}
+header {
+  z-index: 1;
+  width: 100%;
+  background-color: gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head-wrap {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-areas: "logo mainNav secondNav";
+  grid-template-columns: repeat(1fr);
+  grid-template-rows: repeat(3rem);
+  align-items: center;
+}
+.logo {
+  grid-area: logo;
+  width: 150px;
+  height: auto;
+  justify-self: center;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.navigation {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navigation li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  grid-area: mainNav;
+}
+
+.navigation li a {
+  color: black;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.navigation li a:hover {
+  color: white;
+  background-color: black;
+}
+
+.second-nav {
+  grid-area: secondNav;
+}
+
+.language {
+  position: relative;
+}
+.lang-hover:hover .language a {
+  background-color: black;
+  color: white;
+}
+.lang-hover {
+  z-index: 1;
+  display: none;
+  width: 120%;
+  background-color: black;
+  color: white;
+
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.language:hover .lang-hover {
+  display: block;
+}
+
+.pick-language {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lang-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.lang-wrap:hover {
+  cursor: pointer;
+  background-color: #888;
+}
+
+.lang-img {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  display: inline-block;
+}
+.lang-img img {
+  margin-left: 0.25rem;
+  height: 100%;
+  width: 100%;
+}
+
+.drop-menu {
+  grid-area: drop;
+  display: none;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .second-nav {
+    display: flex;
+  }
+  .second-nav {
+    display: flex;
+  }
+}
+@media screen and (max-width: 990px) {
+  .drop-menu {
+    justify-self: end;
+    font-size: 2rem;
+  }
+  .tablet-btn {
+    display: block;
+  }
+
+  .head-wrap {
+    grid-template-areas:
+      "logo mainNav drop"
+      "secondNav secondNav secondNav ";
+
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(3rem);
+  }
+  .second-nav {
+    height: 9rem;
+    display: none;
+    flex-direction: column;
+  }
+  .second-nav li {
+    position: relative;
+    width: 100%;
+  }
+  .second-nav li::after {
+    position: absolute;
+    top: 100%;
+    content: "";
+    width: 100%;
+    border: 1px solid black;
+  }
+  .second-nav li a {
+    width: 100%;
+  }
+
+  .language:hover .lang-hover {
+    display: none;
+  }
+  .visible {
+    display: flex;
+  }
+}
+@media screen and (max-width: 650px) {
+  .mobile-btn {
+    display: block;
+  }
+  .tablet-btn {
+    display: none;
+  }
+  .head-wrap {
+    grid-template-areas:
+      "logo  drop"
+      "secondNav secondNav "
+      "mainNav mainNav";
+    grid-template-columns: repeat(minmax(1fr, auto));
+    grid-template-rows: repeat(minmax(3fr, auto));
+  }
+  .navigation {
+    flex-direction: column;
+  }
+  .main-nav {
+    display: none;
+    height: calc(5 * 3rem);
+  }
+  .main-nav li {
+    position: relative;
+    width: 100%;
+  }
+  .main-nav li::after {
+    position: absolute;
+    top: 100%;
+    content: "";
+
+    width: 100%;
+    border: 1px solid black;
+  }
+  .main-nav li a {
+    width: 100%;
+  }
+  .visible {
+    display: flex;
+  }
+}

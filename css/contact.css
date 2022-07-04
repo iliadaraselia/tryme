@@ -1,0 +1,33 @@
+main {
+  min-width: 250px;
+  min-height: 300px;
+}
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contactPic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.img-cont {
+  margin-top: 1.5rem;
+  width: 300px;
+  height: auto;
+}
+.contact-info {
+  min-width: 250px;
+  width: 300px;
+  height: 2.5rem;
+  font-size: 1.15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(2rem);
+  align-items: center;
+}
+.bold {
+  font-weight: bold;
+}
